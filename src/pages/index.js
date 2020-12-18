@@ -13,10 +13,11 @@ const IndexPage = ({
 }) => (
   <Layout>
     <SEO title="Home" />
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <h1>Blog Posts</h1>
+    <section>
+      <article class="container">
+        content
+      </article>
+    </section>
     {edges.map(edge => <PostLink key={edge.node.id} post={edge.node} />)}
   </Layout>
 )
