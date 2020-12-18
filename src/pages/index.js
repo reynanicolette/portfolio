@@ -1,8 +1,9 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import Section from "../components/section"
 import SEO from "../components/seo"
-import PostLink from "../components/postLink"
+// import PostLink from "../components/postLink"
 import {graphql} from 'gatsby'
 
 const IndexPage = ({
@@ -12,16 +13,16 @@ const IndexPage = ({
 }) => (
   <Layout>
     <SEO title="Home" />
-    <section>
-      <article class="container">
-      contnt
-      </article>
-    </section>
-    <section>
-      <article class="container">
+    {/* <Sec title="UX" />
+    hello
+    <Sec title="Projetcs">
         {edges.map(edge => <PostLink key={edge.node.id} post={edge.node} />)}
-      </article>
-    </section>
+    </Sec> */}
+
+    <Section
+      title="React for Designers"
+      text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."
+     />
   </Layout>
 )
 
