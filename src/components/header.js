@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import './css/main.css'
+import './theme/css/main.css'
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -10,7 +10,6 @@ const Header = ({ siteTitle }) => (
       <ul className="flex-row">
         <li><Link to="/projects">projects</Link></li>
         <li><Link to="#">contact</Link></li>
-        <li><Link to="#">resources</Link></li>
       </ul>
     </nav>
   </header>

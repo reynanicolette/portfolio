@@ -1,61 +1,54 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from "gatsby"
 
-const SectionGroup = styled.div`
-    margin: 100px 0 0;
-    background-size: cover;
-    height: 720px;
-    display: grid;
-    grid-template-rows: 300px auto;
-    grid-gap: 20px;
-    position: relative;
- 
-    @media (max-width: 640px) {
-        height: 820px;
-    }
+const Row = styled.section`
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 `
-
-const SectionLogo = styled.img`
-    width: 128px;
+const Container = styled.article`
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    align-self: end;
 `
 
-const SectionTitleGroup = styled.div`
-    max-width: 800px;
-    margin: 0 40px;
+const Grid = styled.div`
+    min-height: 40vh;
+    padding: 3rem;
+    border-radius: 1rem;
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 300px auto;
-    grid-template-rows: auto 100%;
-
-    @media (max-width: 720px) {
-        grid-template-columns: 1fr;
-    }
+    grid-template-columns: repeat(${props => props.col}, 1fr);
+    align-items: center;
+    background: rgba(25, 27, 31, .05);
 `
 
-const SectionTitle = styled.h3`
-    color: white;
-    font-size: 60px;
-    margin: 0;
+const H1 = styled.h1`
+    font-size: 3rem;
     line-height: 1.2;
- 
-    @media (max-width: 640px) {
-        font-size: 40px;
-    }
+    color: ${props => props.color};
 `
 
-const SectionText = styled.p`
-    color: white;
+const P = styled.p`
+    width: 80%;
+`
+
+const Button = styled.a`
+    display: inline-block;
 `
 
 const Section = props => (
-    <SectionGroup>
-        <SectionTitleGroup>
-            <SectionTitle>{props.title}</SectionTitle>
-            <SectionText>{props.text}</SectionText>
-        </SectionTitleGroup>
-    </SectionGroup>
+    <Row>
+        <Container>
+            <Grid col="2">
+                <aside>
+                    <H1>{props.title}</H1>
+                    <P>{props.text}</P>
+                    <Link to={'/' + props.name}>Learn More</Link>
+                </aside>
+            </Grid>
+        </Container>
+    </Row>
 )
 
 export default Section

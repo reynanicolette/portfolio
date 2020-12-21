@@ -1,5 +1,6 @@
 import React from "react"
 
+import PostLink from "../components/postLink"
 import Layout from "../components/layout"
 import Section from "../components/section"
 import SEO from "../components/seo"
@@ -13,16 +14,23 @@ const IndexPage = ({
 }) => (
   <Layout>
     <SEO title="Home" />
-    {/* <Sec title="UX" />
-    hello
-    <Sec title="Projetcs">
-        {edges.map(edge => <PostLink key={edge.node.id} post={edge.node} />)}
-    </Sec> */}
 
     <Section
-      title="React for Designers"
-      text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."
-     />
+      title="A Guide to Flexbox"
+      text="The Flexbox Module is a one dimensional layout system used to create responsive layouts. This guide was made for CSS beginners who haven't learned the basics of layout yet."
+      name="flexbox"  
+      />
+
+    <Section
+      title="A Guide to CSS Grid"
+      text="The Flexbox Module is a two dimensional layout system used to create responsive layouts. This guide was made for CSS beginners who have learned Flexbox and want to learn about the alternate system"/>
+
+    <Section
+      title="A Guide to Sass"
+      text="Sass is a CSS preprocessor created to make the experience of styling your web pages a little easier than what's currently available for CSS."/>
+    
+    {edges.map(edge => <PostLink key={edge.node.id} post={edge.node} />)}
+    
   </Layout>
 )
 
