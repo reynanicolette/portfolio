@@ -1,10 +1,8 @@
 import React from "react"
 
-import PostLink from "../components/postLink"
 import Layout from "../components/layout"
 import Section from "../components/section"
 import SEO from "../components/seo"
-// import PostLink from "../components/postLink"
 import {graphql} from 'gatsby'
 
 const IndexPage = ({
