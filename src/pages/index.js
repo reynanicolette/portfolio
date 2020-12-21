@@ -15,21 +15,15 @@ const IndexPage = ({
   <Layout>
     <SEO title="Home" />
 
-    <Section
-      title="A Guide to Flexbox"
-      text="The Flexbox Module is a one dimensional layout system used to create responsive layouts. This guide was made for CSS beginners who haven't learned the basics of layout yet."
-      name="flexbox"  
+    {edges.map(edge => 
+      <Section
+      key={edge.node.id}
+      post={edge.node}
+      title={edge.node.frontmatter.title}
+      excerpt={edge.node.excerpt}
+      name={'/' + edge.node.frontmatter.slug} 
       />
-
-    <Section
-      title="A Guide to CSS Grid"
-      text="The Flexbox Module is a two dimensional layout system used to create responsive layouts. This guide was made for CSS beginners who have learned Flexbox and want to learn about the alternate system"/>
-
-    <Section
-      title="A Guide to Sass"
-      text="Sass is a CSS preprocessor created to make the experience of styling your web pages a little easier than what's currently available for CSS."/>
-    
-    {edges.map(edge => <PostLink key={edge.node.id} post={edge.node} />)}
+    )}
     
   </Layout>
 )

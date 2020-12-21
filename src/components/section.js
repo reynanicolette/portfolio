@@ -37,14 +37,14 @@ const Button = styled.a`
     display: inline-block;
 `
 
-const Section = props => (
+const Section = ({ post }) => (
     <Row>
         <Container>
             <Grid col="2">
                 <aside>
-                    <H1>{props.title}</H1>
-                    <P>{props.text}</P>
-                    <Link to={'/' + props.name}>Learn More</Link>
+                    <H1>{post.frontmatter.title}</H1>
+                    <P>{post.excerpt}</P>
+                    <Link to={'/' + post.frontmatter.slug}>Learn More</Link>
                 </aside>
             </Grid>
         </Container>
