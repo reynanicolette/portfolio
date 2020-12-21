@@ -26,7 +26,7 @@ const Grid = styled.div`
 const H1 = styled.h1`
     font-size: 3rem;
     line-height: 1.2;
-    color: ${props => props.color};
+    color: ${post => post.color};
 `
 
 const P = styled.p`

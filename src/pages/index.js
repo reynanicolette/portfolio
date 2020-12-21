@@ -22,6 +22,7 @@ const IndexPage = ({
       title={edge.node.frontmatter.title}
       excerpt={edge.node.excerpt}
       name={'/' + edge.node.frontmatter.slug} 
+      color={edge.node.frontmatter.color}
       />
     )}
     
@@ -41,6 +42,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             slug
             title
+            color
           }
         }
       }
