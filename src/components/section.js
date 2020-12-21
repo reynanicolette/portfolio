@@ -33,10 +33,6 @@ const P = styled.p`
     width: 80%;
 `
 
-const Button = styled.a`
-    display: inline-block;
-`
-
 const Section = ({ post }) => (
     <Row>
         <Container>
