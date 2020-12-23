@@ -1,8 +1,25 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Section from "../components/section"
 import SEO from '../components/seo'
 import '../components/theme/css/main.css'
+import styled from 'styled-components' 
+
+const Article = styled.article`
+    padding: 3rem 0;
+    max-width: 960px;
+`
+
+const H1 = styled.h1`
+    font-size: 3rem;
+    line-height: 1.2;
+    color: ${post => post.color};
+`
+
+const Copy = styled.div`
+`
+
 
 export default function Template({
     data, // this prop will be injected by the GraphQL query below.
@@ -11,21 +28,14 @@ export default function Template({
     const { frontmatter, html } = markdownRemark
     return (
         <Layout>
-            <SEO
-                title={frontmatter.title}
-                description={frontmatter.description} />
-            <section className="blog-post-container">
-                <article className="container blog-post">
-                    <h1>{frontmatter.title}</h1>
-                    <h2>{frontmatter.date}</h2>
-                    <div
-                        className="blog-post-content"
-                        dangerouslySetInnerHTML={{ __html: html }}
-                    />
-                </article>
-            </section>
+            <SEO title={frontmatter.title} description={frontmatter.description} />
+            <Section>
+              <Article>
+                <H1>{frontmatter.title}</H1>
+                <Copy dangerouslySetInnerHTML={{ __html: html }} />
+              </Article>
+            </Section>
         </Layout>
-
     )
 }
 
