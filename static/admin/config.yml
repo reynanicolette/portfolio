@@ -6,9 +6,9 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "guide"
+    label: "Guide"
+    folder: "content/guide"
     create: true
     slug: "{{slug}}"
     editor:
