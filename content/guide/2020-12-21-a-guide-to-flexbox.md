@@ -11,4 +11,4 @@ tags:
   - flexbox
   - layout
 ---
-Flexbox body
+The Flexbox Module is a one dimensional layout system used to create responsive layouts. This guide was made for CSS beginners who haven't learned the basics of layout yet.
