@@ -11,4 +11,4 @@ tags:
   - css
   - design
 ---
-Sass Test
+Sass/SCSS is a CSS preprocessor created to make the experience of styling your web pages a little easier than what's currently available for CSS.
