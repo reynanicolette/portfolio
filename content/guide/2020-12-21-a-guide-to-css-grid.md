@@ -11,4 +11,4 @@ tags:
   - grid
   - layout
 ---
-CSS Grid test
+The CSS Grid Module is a two dimensional layout system used to create responsive layouts. This guide was made for CSS beginners who have learned Flexbox and want to learn about the alternate system
