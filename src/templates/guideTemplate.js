@@ -5,6 +5,7 @@ import Section from "../components/section"
 import SEO from '../components/seo'
 import '../components/theme/css/main.css'
 import styled from 'styled-components' 
+import Skeleton from '@yisheng90/react-loading';
 
 const Article = styled.article`
     padding: 3rem 0;
@@ -28,6 +29,7 @@ export default function Template({
     const { frontmatter, html } = markdownRemark
     return (
         <Layout>
+          <Skeleton width="500px"/>
             <SEO title={frontmatter.title} description={frontmatter.description} />
             <Section>
               <Article>
