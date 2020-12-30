@@ -21,6 +21,7 @@ There are some default properties when you set a parent to `display: flex;`.
 
 ```css
 .flex-container { 
+  color: blue;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
