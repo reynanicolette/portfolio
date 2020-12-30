@@ -6,7 +6,7 @@ const Row = styled.section`
     flex-flow: column nowrap;
     justify-content: center;
 `
-const Container = styled.article`
+const Container = styled.div`
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
