@@ -4,12 +4,14 @@ import Layout from "../components/layout"
 import Section from "../components/section"
 import SEO from '../components/seo'
 import '../components/theme/css/main.css'
+import '../components/theme/css/prism.css'
 import styled from 'styled-components' 
-import Skeleton from '@yisheng90/react-loading';
+
 
 const Article = styled.article`
     padding: 3rem 0;
     max-width: 960px;
+    margin: 0 auto;
 `
 
 const H1 = styled.h1`
@@ -29,7 +31,6 @@ export default function Template({
     const { frontmatter, html } = markdownRemark
     return (
         <Layout>
-          <Skeleton width="500px"/>
             <SEO title={frontmatter.title} description={frontmatter.description} />
             <Section>
               <Article>
@@ -51,7 +52,6 @@ export const pageQuery = graphql`
         title
         description
         tags
-        color
       }
     }
   }

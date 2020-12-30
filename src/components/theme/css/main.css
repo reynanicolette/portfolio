@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap");
 :root {
-  --black: #181b1f;
-  --primary: #f7542f;
+  --black: $black;
+  --primary: $primary;
 }
 
 * {
@@ -11,15 +11,16 @@
 }
 
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: var(--black);
+  color: #181b1f;
 }
 
 a {
+  font-weight: 500;
   text-decoration: none;
-  color: var(--primary);
+  color: #f7542f;
 }
 
 a:hover {
@@ -57,4 +58,21 @@ nav ul li a {
 /* sections */
 section {
   margin: 3rem 0;
+}
+
+/* post template */
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+article ul, article ol {
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
 }
