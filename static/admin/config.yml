@@ -29,7 +29,4 @@ collections:
       - label: "Type"
         field: tags
         pattern: 'css, design'
-     view_groups:
-      - label: Design
-        field: tags
       

@@ -80,7 +80,3 @@ article ul, article ol {
 .shadow {
   box-shadow: 20px 20px 60px 0px rgba(24, 27, 31, 0.13);
 }
-
-:not(pre) > code[class*=language-], pre[class*=language-] {
-  background: transparent;
-}
