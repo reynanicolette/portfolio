@@ -21,7 +21,7 @@ code:
       display: grid;
     }
   lang: css
-puppies: 2
+puppies: 3
 description: The CSS Grid Module is a two dimensional layout system used to
   create responsive layouts. This guide was made for CSS beginners who have
   learned Flexbox and want to learn about the alternate system
