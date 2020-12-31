@@ -2,12 +2,28 @@
 title: A Guide to Flexbox
 date: 2020-12-21T17:31:30.608Z
 color: blue
-description: B
 slug: flexbox
 tags:
   - css
   - flexbox
   - layout
+excerpt: >-
+  The Flexbox Module is a one dimensional layout system used to create
+  responsive layouts. This guide was made for CSS beginners who haven't learned
+  the basics of layout yet. Flex is a display property that should be set on the
+  parent whose children…
+
+
+  [](https://cssdesign.netlify.app/flexbox)
+Body: Flexbox body
+code:
+  code: |-
+    .flex-container {
+      display: flex;
+    }
+  lang: css
+puppies: 2
+description: B
 ---
 The Flexbox Module is a one dimensional layout system used to create responsive layouts. This guide was made for CSS beginners who haven't learned the basics of layout yet.
 
