@@ -89,24 +89,24 @@ article ul, article ol {
 //   color: var(--primary);
 // }
 
-// .gatsby-highlight {
-//   background-color: #1d1f21;
-//   border-radius: 0.3em;
-//   margin: 0.5em 0;
-//   padding: 1em;
-//   overflow: auto;
-// }
+.gatsby-highlight {
+  background-color: $black;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
 
-// .gatsby-highlight pre[class*="language-"].line-numbers {
-//   padding: 0;
-//   padding-left: 2.8em;
-//   overflow: initial;
-// }
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+}
 
 .shadow {
   box-shadow: 20px 20px 60px 0px rgba($black,0.13);
 }
 
-// :not(pre)>code[class*=language-], pre[class*=language-] {
-//   background: transparent;
-// }
+:not(pre)>code[class*=language-], pre[class*=language-] {
+  background: $black;
+}

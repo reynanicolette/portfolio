@@ -20,10 +20,14 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: 'Color', name: 'color', widget: 'string', enableAlpha: true, allowInput: true }
-      - { label: "Description", name: "description", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Excerpt", name: "excerpt", widget: "markdown" }
+      - { label: "Body", name: "Body", widget: "markdown" }
+      - { label:  "Code", name: 'code', widget: 'code' }
+      - { label: "Puppy Count", name: "puppies", widget: "number", default: 1, value_type: "int", min: 1, max: 101, step: 1 }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "guide"}
+
     sortable_fields: ['commit_date']
     view_filters:
       - label: "Type"
