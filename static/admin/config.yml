@@ -19,15 +19,11 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      { label: "Order", name: "order", widget: "number", default: 1, value_type: "int", min: 1, max: 101, step: 1 }
       - { label: 'Color', name: 'color', widget: 'string', enableAlpha: true, allowInput: true }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Excerpt", name: "excerpt", widget: "markdown" }
-      - { label: "Body", name: "Body", widget: "markdown" }
-      - { label:  "Code", name: 'code', widget: 'code' }
-      - { label: "Order", name: "order", widget: "number", default: 1, value_type: "int", min: 1, max: 101, step: 1 }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "guide"}
-
+      - { label: "Body", name: "body", widget: "markdown" }
     sortable_fields: ['commit_date']
     view_filters:
       - label: "Type"
