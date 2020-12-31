@@ -77,21 +77,10 @@ article ul, article ol {
   margin-bottom: 1rem;
 }
 
-code {
-  background: rgba(24, 27, 31, 0.25);
-  color: var(--primary);
+.shadow {
+  box-shadow: 20px 20px 60px 0px rgba(24, 27, 31, 0.13);
 }
 
-.gatsby-highlight {
-  background-color: #1d1f21;
-  border-radius: 0.3em;
-  margin: 0.5em 0;
-  padding: 1em;
-  overflow: auto;
-}
-
-.gatsby-highlight pre[class*=language-].line-numbers {
-  padding: 0;
-  padding-left: 2.8em;
-  overflow: initial;
+:not(pre) > code[class*=language-], pre[class*=language-] {
+  background: transparent;
 }

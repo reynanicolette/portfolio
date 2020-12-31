@@ -4,6 +4,9 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+display_url: https://cssdesign.netlify.app
+site_url: https://cssdesign.netlify.app
+logo_url: https://cssdesign.netlify.app/img/logo.svg
 
 collections:
   - name: "guide"
@@ -16,9 +19,17 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: 'Color', name: 'color', widget: 'boolean', enableAlpha: true, allowInput: true }
+      - { label: 'Color', name: 'color', widget: 'string', enableAlpha: true, allowInput: true }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
+    sortable_fields: ['commit_date']
+    view_filters:
+      - label: "Type"
+        field: tags
+        pattern: 'css, design'
+     view_groups:
+      - label: Design
+        field: tags
       

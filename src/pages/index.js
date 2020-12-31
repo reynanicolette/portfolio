@@ -34,18 +34,9 @@ const IndexPage = ({
   <Layout>
     <SEO title="Home" />
 
-    {/* <Section
-      key={edge.node.id}
-      post={edge.node}
-      title={edge.node.frontmatter.title}
-      excerpt={edge.node.excerpt}
-      name={'/' + edge.node.frontmatter.slug} 
-      color={edge.node.frontmatter.color}
-      /> */}
-
     {edges.map(edge => 
       <Section key={edge.node.id} post={edge.node}>
-        <Grid col="2">
+        <Grid className="shadow" col="2">
           <aside>
             <H1>{edge.node.frontmatter.title}</H1>
             <P>{edge.node.excerpt}</P>
