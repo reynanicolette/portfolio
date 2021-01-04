@@ -6,14 +6,19 @@ import SEO from "../components/seo"
 import {graphql} from 'gatsby'
 import styled from 'styled-components' 
 
+
 const Grid = styled.div`
-    min-height: 40vh;
-    padding: 3rem;
-    border-radius: 1rem;
     display: grid;
     grid-template-columns: repeat(${props => props.col}, 1fr);
-    align-items: center;
-    background: rgba(25, 27, 31, .05);
+    grid-gap: 2rem;
+    align-items: start;
+`
+
+const Preview = styled.article`
+    min-height: 40vh; 
+    padding: 3rem;
+    border-radius: 1rem;
+    background: #f3f3f4;
 `
 
 const H1 = styled.h1`
@@ -32,18 +37,20 @@ const IndexPage = ({
   }) => (
   <Layout>
     <SEO title="Home" />
-
+    <Section>
+    <Grid col="2">
     {edges.map(edge => 
-      <Section key={edge.node.id} post={edge.node}>
-        <Grid className="shadow" col="2">
-          <aside>
-            <H1>{edge.node.frontmatter.title}</H1>
-            <P>{edge.node.excerpt}</P>
-            <Link to={'/' + edge.node.frontmatter.slug}>Learn More</Link>
-          </aside>
-        </Grid>
-      </Section>
+        <Preview className="shadow" key={edge.node.id} post={edge.node}>
+          <H1>{edge.node.frontmatter.title}</H1>
+          <P>{edge.node.excerpt}</P>
+          <Link to={'/' + edge.node.frontmatter.slug}>Learn More</Link>
+        </Preview>
     )}
+    <Preview className="shadow">
+      <H1>Does this work</H1>
+    </Preview>
+    </Grid>
+    </Section>
     
   </Layout>
 )

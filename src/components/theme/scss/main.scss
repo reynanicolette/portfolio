@@ -32,6 +32,10 @@ a:hover {
   opacity: .6;
 }
 
+main {
+  margin-top: -6rem;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -40,11 +44,13 @@ a:hover {
 
 /* header */
 header {
-  margin: 1rem 0;
+  margin: 3rem 0;
+  z-index: -1;
 }
 
 .logo {
-  margin-right: 1rem;
+  width: 8rem;
+  border-radius: 100%;
 }
 
 nav ul {
@@ -55,9 +61,18 @@ nav ul li a {
   margin-right: 1rem;
 }
 
+[aria-current] {
+  background: transparent;
+}
+
 /* flex alignment */
 .flex-row {
   display: flex;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
 }
 
 /* sections */
